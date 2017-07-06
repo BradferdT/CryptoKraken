@@ -1,0 +1,105 @@
+html,body{
+	width:100vw;
+	height:100vh;
+	background:#111;
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+.container{
+	width:100vw;
+	height:100vh;
+	padding: 0px;
+	margin: 0px;
+	background: transparent;
+	z-index: 2;
+}
+
+canvas{
+	display:block;
+	vertical-align:bottom;
+}
+
+.header_height{
+	height: 10%;
+	width: 100%;
+	border-bottom: 1px solid #34495e;
+	-webkit-app-region: drag;
+}
+
+.header_col_height{
+	height: 100%;
+	font-size: 2em;
+	font-family:'Seaweed Script';
+	color: #3498db;
+	text-align: center;
+}
+
+.settings_icon{
+	float: right;
+	color: #34495e;
+	padding-top: 3px;
+}
+
+.btc:before{
+	color: #e67e22;
+	content: ' \25CF';
+  font-size: 2em;
+}
+
+.currency{
+	color: #ecf0f1;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.price{
+	color: #ecf0f1;
+	font-size: 2em;
+}
+
+.btc_height{
+	height: 10%;
+	width: 100%;
+	border-bottom: 0.5px solid #34495e;
+	background-color: transparent;
+}
+
+/* Delete this its just for testing */
+.eth:before{
+	color: #8e44ad;
+	content: ' \25CF';
+  font-size: 2em;
+}
+
+.currency2{
+	color: #ecf0f1;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.price2{
+	color: #ecf0f1;
+	font-size: 2em;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+	position: absolute;
+  width: 100%;
+  height: 100%;
+	z-index: 1;
+  /*background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;*/
+}
