@@ -1,0 +1,27 @@
+{
+  "name": "cryptokraken",
+  "version": "1.0.0",
+  "description": "Crypto Currency Tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradferdT/CryptoKraken.git"
+  },
+  "author": "Brad Transtrum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BradferdT/CryptoKraken/issues"
+  },
+  "homepage": "https://github.com/BradferdT/CryptoKraken#readme",
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-prebuilt-compile": "^1.6.11"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
