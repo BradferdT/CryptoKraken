@@ -14,15 +14,21 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>if (window.module) module = window.module;</script>
   </head>
   <body>
-    <div id="root"></div>
-    <div id="particles-js"></div>
+    <div id="root" class="loader"></div>
+    <!-- <div id="particles-js"></div>
+    </div> -->
     <!-- Scripts -->
     <script src="src/index.js"></script>
     <script src="assets/particles.js"></script>
     <script src="assets/app.js" ></script>
-
+    <script src="assets/chart.min.js"></script>
+    <script src="assets/charts.js"></script>
+    <script src="assets/exchange.socket.js"></script>
+    <script src="assets/exchange.graph.js"></script>
+    <script src="assets/portfolio.graph.js"></script>
   </body>
 </html>
