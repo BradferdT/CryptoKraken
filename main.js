@@ -17,6 +17,7 @@ function createWindow () {
     height: 600,
     backgroundColor: '#111',
     titleBarStyle: 'hidden',
+    alwaysOnTop: true,
     show: false
   })
 
