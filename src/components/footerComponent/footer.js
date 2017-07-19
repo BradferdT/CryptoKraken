@@ -7,18 +7,13 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-        <NavLink activeClassName="active" to="/tools">
-          <div className="col s4 footerLink center">
-            Tools
-          </div>
-          </NavLink>
           <NavLink exact activeClassName="active" to="/exchange">
-          <div className="col s4 footerLink center">
-            Home
+          <div className="col s6 footerLink center">
+            Exchange
           </div>
           </NavLink>
           <NavLink activeClassName="active" to="/portfolio">
-          <div className="col s4 footerLink center">
+          <div className="col s6 footerLink center">
             Portfolio
           </div>
           </NavLink>

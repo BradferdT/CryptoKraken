@@ -4,6 +4,7 @@ import { startSockets } from '../../../assets/exchange.socket.js';
 import { drawDonut } from '../../../assets/portfolio.graph.js';
 var Link = require('react-router-dom').Link;
 var NavLink = require('react-router-dom').NavLink;
+import ReactTooltip from 'react-tooltip';
 
 class Portfolio extends Component {
   constructor(){
@@ -103,13 +104,13 @@ class Portfolio extends Component {
 </div>
 </div>
 
-          <div className="donut_inner_total">
+          <div className="donut_inner_total" data-tip="Total Invested" data-delay-show='500'>
 
           </div>
-          <div className="donut_inner_up">
+          <div className="donut_inner_up" data-tip="24hr Change" data-delay-show='500'>
 
           </div>
-
+            <ReactTooltip />
       </div>
     )
   }

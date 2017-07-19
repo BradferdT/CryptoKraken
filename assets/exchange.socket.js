@@ -163,7 +163,8 @@ function submitNotification(message,eva,value){
   console.log('submit notification called');
   Notification.requestPermission().then(function(result){
     var Notify = new Notification('Crypto Kraken', {
-      'body': `${message} is ${eva} $${value}`
+      'body': `${message} is ${eva} $${value}`,
+      'icon': 'http://i.imgur.com/Mzi8LkZ.png'
     });
   })
 }

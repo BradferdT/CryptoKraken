@@ -10,11 +10,12 @@ class Header extends Component {
         <div className="col s6 offset-s3 header_col_height">
             Crypto Kraken
         </div>
-        <NavLink to="/settings">
+
         <div className="col s2 settings_header">
+        <NavLink to="/settings">
          <i className="material-icons settings_icon">settings</i>
-         </div>
          </NavLink>
+         </div>
       </div>
       </header>
     )

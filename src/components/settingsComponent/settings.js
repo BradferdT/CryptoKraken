@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 var Link = require('react-router-dom').Link;
 var NavLink = require('react-router-dom').NavLink;
 const settings = require('electron-settings');
+import ReactTooltip from 'react-tooltip';
 
 console.log(settings.has('ethNotification'));
 class Settings extends Component {
@@ -125,7 +126,8 @@ class Settings extends Component {
   testNotify(){
     Notification.requestPermission().then(function(result){
       var testNotification = new Notification('Crypto Kraken', {
-        'body': 'Test Notification'
+        'body': 'Test Notification',
+        'icon': 'http://i.imgur.com/Mzi8LkZ.png'
       });
     })
   }
@@ -164,38 +166,38 @@ class Settings extends Component {
         </div>
         <div className="row">
           <div className="col s6 offset-s3">
-            <button onClick={ this.addNotification } className="save_button">Add</button>
+            <button onClick={ this.addNotification } className="add_button">Add</button>
           </div>
         </div>
 
         <div className="row display_notifications center">
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayBtc && (<div className="alert_text" onClick={this.removeBtc}>
-        Alert:  Bitcoin when {settings.get('btcNotification.eval')} than  ${settings.get('btcNotification.value')}</div>)}
+        Alert for Bitcoin when {settings.get('btcNotification.eval')} than  ${settings.get('btcNotification.value')}</div>)}
         </div>
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayEth && (<div className="alert_text" onClick={this.removeEth}>
-        Alert:  Ethereum when {settings.get('ethNotification.eval')} than  ${settings.get('ethNotification.value')}</div>)}
+        Alert for Ethereum when {settings.get('ethNotification.eval')} than  ${settings.get('ethNotification.value')}</div>)}
         </div>
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayLtc && (<div className="alert_text" onClick={this.removeLtc}>
-        Alert:  Litecoin when {settings.get('ltcNotification.eval')} than  ${settings.get('ltcNotification.value')}</div>)}
+        Alert for Litecoin when {settings.get('ltcNotification.eval')} than  ${settings.get('ltcNotification.value')}</div>)}
         </div>
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayZec && (<div className="alert_text" onClick={this.removeZec}>
-        Alert:  Zcash when {settings.get('zecNotification.eval')} than  ${settings.get('zecNotification.value')}</div>)}
+        Alert for Zcash when {settings.get('zecNotification.eval')} than  ${settings.get('zecNotification.value')}</div>)}
         </div>
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayXmr && (<div className="alert_text" onClick={this.removeXmr}>
-        Alert:  Monero when {settings.get('xmrNotification.eval')} than  ${settings.get('xmrNotification.value')}</div>)}
+        Alert for Monero when {settings.get('xmrNotification.eval')} than  ${settings.get('xmrNotification.value')}</div>)}
         </div>
-        <div className="col s12">
+        <div className="col s12" data-tip="Click to Remove Alert" data-delay-show='500'>
         {this.state.displayDash && (<div className="alert_text" onClick={this.removeDash}>
-        Alert:  Dash when {settings.get('dashNotification.eval')} than  ${settings.get('dashNotification.value')}</div>)}
+        Alert for Dash when {settings.get('dashNotification.eval')} than  ${settings.get('dashNotification.value')}</div>)}
         </div>
         </div>
 
-
+          <ReactTooltip />
       </div>
     )
   }
