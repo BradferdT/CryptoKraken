@@ -2,9 +2,11 @@
   "name": "cryptokraken",
   "version": "1.0.0",
   "description": "Crypto Currency Tool",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron ./src/main.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,10 @@
   },
   "homepage": "https://github.com/BradferdT/CryptoKraken#readme",
   "devDependencies": {
-    "electron": "^1.6.11",
-    "electron-prebuilt-compile": "^1.6.11"
+    "electron-prebuilt-compile": "1.6.11"
   },
   "dependencies": {
+    "electron-prebuilt-compile": "1.6.11",
     "electron-settings": "^3.1.1",
     "history": "^4.6.3",
     "react": "^15.6.1",
@@ -28,7 +30,35 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-select": "^1.0.0-rc.5",
-    "react-tooltip": "^3.3.0",
-    "socket.io": "^2.0.3"
+    "react-tooltip": "^3.3.0"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {},
+      "electronWinstallerConfig": {
+        "name": ""
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": ""
+      }
+    }
   }
 }

@@ -150,7 +150,8 @@ function alert(coin,value){
         settings.delete(`${currSetting}`);
       }
     }else{
-      if(parsefl(value) < settings.get(`${currSetting}.value`)){
+      if(parseFloat(value) < settings.get(`${currSetting}.value`)){
+          console.log('in alert for lessthan');
           submitNotification(settings.get(`${currSetting}.coin`),'Less Than',settings.get(`${currSetting}.value`))
           settings.delete(`${currSetting}`);
       }
